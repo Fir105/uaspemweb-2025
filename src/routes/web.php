@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Livewire\Livewire;
 
+use App\Livewire\AnimeList;
+
 /* NOTE: Do Not Remove
 / Livewire asset handling if using sub folder in domain
 */
@@ -16,6 +18,10 @@ Livewire::setScriptRoute(function ($handle) {
 /*
 / END
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', AnimeList::class);
+Route::get('/home', AnimeList::class);
+
